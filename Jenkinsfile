@@ -30,7 +30,7 @@ pipeline {
                 success {
                     recordIssues tool: checkStyle()
                     recordIssues tool: findBugs()
-                    junit '**/reports/junit.xml'
+                    //junit '**/reports/junit.xml'
                     stepcounter settings: [[encoding: 'UTF-8', filePattern: '**/*.java']]
                 }
             }
