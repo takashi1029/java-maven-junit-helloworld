@@ -28,7 +28,7 @@ pipeline {
             }
             post {
                 success {
-                    recordIssues tool: checkstyle()
+                    recordIssues tool: checkStyle()
                     recordIssues tool: findBugs()
                 }
             }
