@@ -26,6 +26,12 @@ pipeline {
                     }
                 }
             }
+            post {
+                success {
+                    recordIssues tool: checkstyle()
+                    recordIssues tool: findBugs()
+                }
+            }
         }
         // stage('Analysis') {
         //     steps {
